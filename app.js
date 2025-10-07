@@ -1,7 +1,7 @@
 const express = require ('express');
 
 const indexRouter = require('./routes/indexRoute');
-const messageRouter = require('./routes/messageRoute')
+const newRouter = require('./routes/newRoute')
 
 const app = express();
 const PORT = 3000;
@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded( {extended: true }));
 
 app.use('/', indexRouter);
-app.use('/new', messageRouter);
+app.use('/new', newRouter);
 
 
 app.listen(PORT, () => {
