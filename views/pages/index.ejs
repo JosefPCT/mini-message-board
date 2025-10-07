@@ -1,6 +1,16 @@
 <%- include('../partials/header') %>
 <main>
-    <h1>Home Pagess</h1>
+    <h1>Home Pages</h1>
+    <h2>Messages</h2>
+    <div>
+        <% messages.forEach( (message) => { %>
+        <div>
+            <p><%= message.text %></p>
+            <p>From: <%= message.user %></p>
+            <p>Posted on: <%= message.added %></p>
+        </div>
+        <% }) %>
+    </div>
 </main>
 
 <%- include('../partials/footer') %>
