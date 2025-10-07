@@ -8,10 +8,6 @@ const router = express.Router();
 //   res.render('pages/index');
 // })
 
-router.get('', indexController.renderIndex);
-
-router.get('/new', (req, res) => {
-  res.send('New Message Page');
-})
+router.get('/', indexController.renderIndex);
 
 module.exports = router;
