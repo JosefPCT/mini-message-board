@@ -9,7 +9,7 @@
             <p><%= message.text %></p>
             <p>From: <%= message.user %></p>
             <p>Posted on: <%= message.added %></p>
-            <p><a href="#">Open</a></p>
+            <p><a href="/messages/<%= message.id%>">Open</a></p>
         </div>
         <% }) %>
     </div>
