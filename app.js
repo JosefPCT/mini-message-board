@@ -4,6 +4,7 @@ const indexRouter = require('./routes/indexRoute');
 
 const app = express();
 const PORT = 3000;
+app.set('view engine', 'ejs');
 
 app.use('/', indexRouter);
 
