@@ -6,7 +6,7 @@ module.exports = {
   },
   createMessage: (req, res) => {
     // console.log(req.body);
-    messages.push({ text: req.body.messageText, user: req.body.author, added: new Date() });
+    messages.push({ id: messages.length + 1, text: req.body.messageText, user: req.body.author, added: new Date() });
     res.redirect('/');
   }
 }
