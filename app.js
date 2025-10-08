@@ -6,7 +6,7 @@ const newRouter = require('./routes/newRoute');
 const messagesRouter = require('./routes/messagesRoute');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 
