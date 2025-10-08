@@ -1,8 +1,9 @@
 <%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
 <main>
     <h1>Home Pages</h1>
     <h2>Messages</h2>
-    <div>
+    <div class="card">
         <% messages.forEach( (message) => { %>
         <div class="card">
             <p><%= message.text %></p>
