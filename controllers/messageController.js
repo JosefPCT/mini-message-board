@@ -1,13 +1,26 @@
-const messages = require('../models/messages');
+// const messages = require('../models/messages');
+const db = require('../db/queries');
 
-const renderMessage = (req, res) => {
+async function renderMessage(req, res){
   let parsedId = parseInt(req.params.id);
-  let mes = getMessageById(parsedId);
+  let message = await db.getMessageById(parsedId);
+  console.log(message);
   res.render('pages/message', { 
       title: 'Message',
-      message: mes
-  })  
+      message: message[0]
+  }) 
 }
+
+// Used when dealing with local data objects
+// const renderMessage = (req, res) => {
+//   let parsedId = parseInt(req.params.id);
+//   let mes = getMessageById(parsedId);
+//   res.render('pages/message', { 
+//       title: 'Message',
+//       message: mes
+//   })  
+// }
+
 
 const getMessageById = (id) => {
   return messages.find((message) => id === message.id);
