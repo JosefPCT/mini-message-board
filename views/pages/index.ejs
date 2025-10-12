@@ -6,8 +6,8 @@
     <div class="card">
         <% messages.forEach( (message) => { %>
         <div class="card">
-            <p><%= message.text %></p>
-            <p>From: <%= message.user %></p>
+            <p><%= message.data %></p>
+            <p>From: <%= message.username %></p>
             <p>Posted on: <%= message.added %></p>
             <p><a href="/messages/<%= message.id%>">Open</a></p>
         </div>
