@@ -21,10 +21,10 @@ async function renderMessage(req, res){
 //   })  
 // }
 
-
-const getMessageById = (id) => {
-  return messages.find((message) => id === message.id);
-}
+// Used when dealing with local data objects
+// const getMessageById = (id) => {
+//   return messages.find((message) => id === message.id);
+// }
 
 module.exports = {
   renderMessage
